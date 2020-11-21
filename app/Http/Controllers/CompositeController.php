@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 use Response;
 class CompositeController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('jwt.auth', ['only' => ['checkOut']]);
+    }
     public function checkOut(Request $request, CompositeService $compositeService)
     {
         $result = $compositeService->checkOut($request);
