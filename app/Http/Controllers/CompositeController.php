@@ -9,7 +9,7 @@ class CompositeController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('jwt.auth', ['only' => ['checkOut']]);
+//        $this->middleware('jwt.auth', ['only' => ['checkOut']]);
     }
 
 
