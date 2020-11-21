@@ -31,6 +31,6 @@ Route::group([
 
 });
 
-Route::get('/products', [ProductsController::class, 'index']);
-Route::post('/products/{id}/createDiscount', [ProductsController::class, 'createDiscount']);
-Route::post('/products/buyItems', [CompositeController::class, 'checkOut']);
+Route::get('/products', [ProductsController::class, 'index']);// list all products
+Route::post('/products/{id}/createDiscount', [ProductsController::class, 'createDiscount']);// add discount to any item
+Route::post('/products/buyItems', [CompositeController::class, 'checkOut']);//bill proccess

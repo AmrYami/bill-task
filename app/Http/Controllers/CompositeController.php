@@ -11,6 +11,13 @@ class CompositeController extends Controller
     {
         $this->middleware('jwt.auth', ['only' => ['checkOut']]);
     }
+
+
+    /**
+     * @param Request $request
+     * @param CompositeService $compositeService
+     * @return \Illuminate\Http\JsonResponse
+     */
     public function checkOut(Request $request, CompositeService $compositeService)
     {
         $result = $compositeService->checkOut($request);

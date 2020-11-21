@@ -14,6 +14,12 @@ class ProductsController extends Controller
         $this->middleware('MerchantUser', ['only' => ['index', 'createDiscount']]);
     }
 
+    /**
+     * @param Request $request
+     * @param ProductService $productService
+     * @return \Illuminate\Http\JsonResponse
+     * list items
+     */
     public function index(Request $request, ProductService $productService)
     {
         $products = $productService->listItems($request);
@@ -25,6 +31,13 @@ class ProductsController extends Controller
     }
 
 
+    /**
+     * @param int $productId
+     * @param CreateDiscountRequest $request
+     * @param ProductService $productService
+     * @return \Illuminate\Http\JsonResponse
+     * set discount any items
+     */
     public function createDiscount(int $productId, CreateDiscountRequest $request, ProductService $productService)
     {
         $product = $productService->createDiscount($request, $productId);

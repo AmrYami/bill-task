@@ -34,6 +34,10 @@ class CompositeService
         $this->productService = $productService;
     }
 
+    /**
+     * @param Request $request
+     * @return array|string[] // proccess
+     */
     public function checkOut(Request $request)
     {
         if (!$request->items)
@@ -59,6 +63,10 @@ class CompositeService
         return ['error' => 'Something Went Wrong Please Try Again Later'];
     }
 
+    /**
+     * @param $request
+     * @param $products // add count items to object
+     */
     public function addCountItemsToObject($request, $products): void// add count items in object
     {
         foreach ($products as $item) {
@@ -67,6 +75,10 @@ class CompositeService
         }
     }
 
+    /**
+     * @param object $items
+     * @return array // set all tax offers
+     */
     public function calculate(object $items): array
     {
 //        every offer has its owen class
@@ -90,6 +102,12 @@ class CompositeService
         return $this->allResults;
     }
 
+    /**
+     * @param Request $request
+     * @param object $products
+     * @param array $resultTaxOffers
+     * @return array result what we need style
+     */
     public function manageResult(Request $request, object $products, array $resultTaxOffers): array
     {
         $items = [];
