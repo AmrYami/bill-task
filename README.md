@@ -31,7 +31,7 @@ and we have directory app/Helpers for manage all currencies we need to use.
  user can set discount for any items but have to has type merchant check middleware merchant and already
  have to be auth.
  
- to test all in postman you have file in project called taskBill.postman_collection.json import it in
- postman to use requests.
+ to test all in postman you have file in project called taskBill.postman_collection.json import it 
+in postman to use requests.
  
  test in app/tests/Feature/Bill.php
