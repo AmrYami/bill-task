@@ -73,7 +73,7 @@ class Bill extends TestCase
             "error"]);
     }
 
-    public function testBillWithItemsDoesntExist()
+    public function testBillWithItemDoesntExist()
     {
         $response = $this
             ->postJson('/api/products/buyItems', [

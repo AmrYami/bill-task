@@ -33,3 +33,5 @@ and we have directory app/Helpers for manage all currencies we need to use.
  
  to test all in postman you have file in project called taskBill.postman_collection.json import it in
  postman to use requests.
+ 
+ test in app/tests/Feature/Bill.php
