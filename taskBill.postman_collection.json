@@ -1,0 +1,151 @@
+{
+	"variables": [],
+	"info": {
+		"name": "taskBill",
+		"_postman_id": "6a0330cf-932c-3f7e-441c-cdb04fb6bab3",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost/bill-task/public/api/auth/login",
+			"request": {
+				"url": "",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/bill-task/public/api/products/1/createDiscount",
+			"request": {
+				"url": "localhost/bill-task/public/api/products/1/createDiscount",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2JpbGwtdGFza1wvcHVibGljXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNjA1OTAyNTQ4LCJleHAiOjE2MDU5MDYxNDgsIm5iZiI6MTYwNTkwMjU0OCwianRpIjoiY2o3ckwzekFSMlN0OG1VRyIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.UsaBCCJ00Lci_H52SNhqwLHFdZEH_Wcl81nlfmh12Hk",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": "",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "discount_percentage",
+							"value": "10",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/bill-task/public/api/products/buyItems",
+			"request": {
+				"url": "localhost/bill-task/public/api/products/buyItems",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2JpbGwtdGFza1wvcHVibGljXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNjA1OTAyNTQ4LCJleHAiOjE2MDU5MDYxNDgsIm5iZiI6MTYwNTkwMjU0OCwianRpIjoiY2o3ckwzekFSMlN0OG1VRyIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.UsaBCCJ00Lci_H52SNhqwLHFdZEH_Wcl81nlfmh12Hk",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"items\": [{\n\t\t\t\"id\": 1,\n\t\t\t\"count\": 2\n\t\t},\n\t\t{\n\t\t\t\"id\": 4,\n\t\t\t\"count\": 1\n\t\t},\n\t\t{\n\t\t\t\"id\": 3,\n\t\t\t\"count\": 1\n\t\t}\n\t]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/bill-task/public/api/products/buyItems?currency=EGY",
+			"request": {
+				"url": {
+					"raw": "localhost/bill-task/public/api/products/buyItems?currency=EGY",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"bill-task",
+						"public",
+						"api",
+						"products",
+						"buyItems"
+					],
+					"query": [
+						{
+							"key": "currency",
+							"value": "EGY",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2JpbGwtdGFza1wvcHVibGljXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNjA1OTAyNTQ4LCJleHAiOjE2MDU5MDYxNDgsIm5iZiI6MTYwNTkwMjU0OCwianRpIjoiY2o3ckwzekFSMlN0OG1VRyIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.UsaBCCJ00Lci_H52SNhqwLHFdZEH_Wcl81nlfmh12Hk",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"items\": [{\n\t\t\t\"id\": 1,\n\t\t\t\"count\": 1\n\t\t},\n\t\t{\n\t\t\t\"id\": 2,\n\t\t\t\"count\": 1\n\t\t}\n\t]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/bill-task/public/api/products/buyItems",
+			"request": {
+				"url": "localhost/bill-task/public/api/products/buyItems",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2JpbGwtdGFza1wvcHVibGljXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNjA1OTAyNTQ4LCJleHAiOjE2MDU5MDYxNDgsIm5iZiI6MTYwNTkwMjU0OCwianRpIjoiY2o3ckwzekFSMlN0OG1VRyIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.UsaBCCJ00Lci_H52SNhqwLHFdZEH_Wcl81nlfmh12Hk",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"items\": [{\n\t\t\t\"id\": 5,\n\t\t\t\"count\": 1\n\t\t}\n\t]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

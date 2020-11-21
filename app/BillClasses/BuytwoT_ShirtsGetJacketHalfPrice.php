@@ -11,7 +11,9 @@ class BuytwoT_ShirtsGetJacketHalfPrice implements CalcInterface
 {
     private $itemIdForOffer = 1;
     private $setOfferInItem = 3;
-
+    /**
+     * this class to manage offer Buy two t-shirts and get a jacket half its price.
+     */
 
     /**
      * @var object
@@ -61,10 +63,13 @@ class BuytwoT_ShirtsGetJacketHalfPrice implements CalcInterface
 
     public function calculate()
     {
-        $keyCauserOffer = array_search($this->getItemIdForOffer(), array_column($this->items->toArray(), 'id'));
-        $keySetOffer = array_search($this->getSetOfferInItem(), array_column($this->items->toArray(), 'id'));
-        if ($this->items[$keyCauserOffer]['count'] > 1)
+        $keyCauserOffer = array_search($this->getItemIdForOffer(), array_column($this->items->toArray(), 'id'));//get the items causer for offer
+        $keySetOffer = array_search($this->getSetOfferInItem(), array_column($this->items->toArray(), 'id'));//get item we need to set offer in it
+        if ($this->items[$keyCauserOffer]['count'] > 1) {//calculate discount
+            $discount = ($this->items[$keySetOffer]->unit_price * 50) / 100;
             $this->items[$keySetOffer]->discount_percentage = 50;
-        return -($this->items[$keySetOffer]->unit_price * 50) / 100;
+            $this->items[$keySetOffer]->discount = $discount;
+            return -$discount;
+        }
     }
 }

@@ -11,8 +11,8 @@ class ProductsController extends Controller
     public function __construct()
     {
         $this->middleware('jwt.auth', ['only' => ['createDiscount']]);
-
-//        $this->middleware('MerchantUser', ['only' => ['index', 'createDiscount']]);
+//
+        $this->middleware('MerchantUser', ['only' => ['index', 'createDiscount']]);
     }
 
     public function index(Request $request, ProductService $productService)
