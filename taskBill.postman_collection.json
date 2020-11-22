@@ -2,7 +2,7 @@
 	"variables": [],
 	"info": {
 		"name": "taskBill",
-		"_postman_id": "6a0330cf-932c-3f7e-441c-cdb04fb6bab3",
+		"_postman_id": "0186b27c-85d2-6697-bbe9-8a5ef70f1c86",
 		"description": "",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
@@ -13,7 +13,10 @@
 				"url": "",
 				"method": "GET",
 				"header": [],
-				"body": {},
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
 				"description": ""
 			},
 			"response": []
@@ -146,6 +149,28 @@
 					"mode": "raw",
 					"raw": "{\"items\": [{\n\t\t\t\"id\": 5,\n\t\t\t\"count\": 1\n\t\t}\n\t]\n}"
 				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/bill-task/public/api/products",
+			"request": {
+				"url": "localhost/bill-task/public/api/products",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2JpbGwtdGFza1wvcHVibGljXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNjA2MDM2MDU4LCJleHAiOjE2MDYwMzk2NTgsIm5iZiI6MTYwNjAzNjA1OCwianRpIjoiMWN5ZkUxNXBHamM1eERnMSIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.jaNEpBMQ7hovuC5ni7Jx-Q5WMnVQkyEBltr_7dhJCdk",
+						"description": ""
+					},
+					{
+						"key": "",
+						"value": "",
+						"description": ""
+					}
+				],
+				"body": {},
 				"description": ""
 			},
 			"response": []
