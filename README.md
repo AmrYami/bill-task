@@ -35,3 +35,29 @@ and we have directory app/Helpers for manage all currencies we need to use.
 in postman to use requests.
  
  test in app/tests/Feature/Bill.php
+ 
+ 
+ links API's:
+ localhost/bill-task/public/api/products/buyItems // bill proccess you can add currency to change mount just add ?currency=EGY
+ post json: {"items": [{
+            			"id": 1,
+            			"count": 2
+            		},
+            		{
+            			"id": 4,
+            			"count": 1
+            		},
+            		{
+            			"id": 3,
+            			"count": 1
+            		}
+            	]
+            }
+ header: [{"key":"Content-Type","value":"application/json","description":""}]
+ 
+ 
+localhost/JWTWithCrud/public/api/products/4/createDiscount // add discount to any items just set id
+post data: [{"key":"discount_percentage","value":"10","description":""}]
+header: [{"key":"Authorization","value":"bearer TOKEN","description":""}]
+
+
