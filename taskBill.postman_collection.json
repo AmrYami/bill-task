@@ -8,20 +8,6 @@
 	},
 	"item": [
 		{
-			"name": "localhost/bill-task/public/api/auth/login",
-			"request": {
-				"url": "",
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": ""
-				},
-				"description": ""
-			},
-			"response": []
-		},
-		{
 			"name": "localhost/bill-task/public/api/products/1/createDiscount",
 			"request": {
 				"url": "localhost/bill-task/public/api/products/1/createDiscount",
@@ -171,6 +157,33 @@
 					}
 				],
 				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "localhost/bill-task/public/api/auth/login",
+			"request": {
+				"url": "localhost/bill-task/public/api/auth/login",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "amr@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "123456789",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
 				"description": ""
 			},
 			"response": []
