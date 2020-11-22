@@ -56,8 +56,9 @@ in postman to use requests.
  header: [{"key":"Content-Type","value":"application/json","description":""}]
  
  
-localhost/JWTWithCrud/public/api/products/4/createDiscount // add discount to any items just set id
+localhost/JWTWithCrud/public/api/products/4/createDiscount // add discount to any items just set id and account have to be merchant
 post data: [{"key":"discount_percentage","value":"10","description":""}]
 header: [{"key":"Authorization","value":"bearer TOKEN","description":""}]
 
-
+localhost/bill-task/public/api/auth/login
+post data: [{"key":"email","value":"amr@gmail.com","description":""},{"key":"password","value":"123456789","description":""}]
