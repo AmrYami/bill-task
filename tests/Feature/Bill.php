@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
@@ -22,24 +23,25 @@ class Bill extends TestCase
      */
     public function testBillWithItemsDone()
     {
-        $response = $this
-            ->postJson('/api/products/buyItems', [
-                    "items" => [
-                        [
-                            "id" => 1,
-                            "count" => 2
-                        ],
-                        [
-                            "id" => 4,
-                            "count" => 1
-                        ],
-                        [
-                            "id" => 3,
-                            "count" => 1
-                        ]
-                    ]
+        $endPoint = 'api/products/buyItems';
+        $params = [
+            "items" => [
+                [
+                    "id" => 1,
+                    "count" => 2
+                ],
+                [
+                    "id" => 4,
+                    "count" => 1
+                ],
+                [
+                    "id" => 3,
+                    "count" => 1
                 ]
-            );
+            ]
+        ];
+        $user = User::factory()->create(['type' => 'merchant']);
+        $response = $this->callApi($endPoint, $params, $user->email);
 
         $response->assertStatus(200);
         $response->assertJsonStructure([
@@ -61,12 +63,11 @@ class Bill extends TestCase
 
     public function testBillWithoutNoItems()
     {
-        $response = $this
-            ->postJson('/api/products/buyItems', [
-                    "items" => [
-                    ]
-                ]
-            );
+        $endPoint = 'api/products/buyItems';
+        $params = [];
+
+        $user = User::factory()->create(['type' => 'merchant']);
+        $response = $this->callApi($endPoint, $params, $user->email);
 
         $response->assertStatus(200);
         $response->assertJsonStructure([
@@ -75,16 +76,18 @@ class Bill extends TestCase
 
     public function testBillWithItemDoesntExist()
     {
-        $response = $this
-            ->postJson('/api/products/buyItems', [
-                    "items" => [
-                        [
-                            "id" => 5,
-                            "count" => 1
-                        ]
-                    ]
+        $endPoint = 'api/products/buyItems';
+        $params = [
+            "items" => [
+                [
+                    "id" => 5,
+                    "count" => 1
                 ]
-            );
+            ]
+        ];
+
+        $user = User::factory()->create(['type' => 'merchant']);
+        $response = $this->callApi($endPoint, $params, $user->email);
 
         $response->assertStatus(200);
         $response->assertJsonStructure([
@@ -93,17 +96,44 @@ class Bill extends TestCase
 
     public function testObjectJsonHasErrorStructure()
     {
-        $response = $this
-            ->postJson('/api/products/buyItems', [
-                    "items" => [
-                            "id" => 5,
-                            "count" => 1
-                    ]
-                ]
-            );
+        $endPoint = 'api/products/buyItems';
+        $params = [
+            "items" => [
+                "id" => 5,
+                "count" => 1
+            ]
+        ];
+
+        $user = User::factory()->create(['type' => 'merchant']);
+        $response = $this->callApi($endPoint, $params, $user->email);
 
         $response->assertStatus(200);
         $response->assertJsonStructure([
             "error"]);
+    }
+
+    /**
+     * Simulate call api
+     *
+     * @param  string $endpoint
+     * @param  array  $params
+     * @param  string $userMail
+     *
+     * @return mixed
+     */
+    protected function callApi($endpoint, $params = [], $userMail)
+    {
+        $headers = [];
+
+        if (!is_null($userMail)) {
+            $token = auth()->guard('api')
+                ->login(User::whereEmail($userMail)->first());
+            $headers['Authorization'] = 'Bearer ' . $token;
+        }
+        return $this->postJson(
+             $endpoint,
+            $params,
+            $headers
+        );
     }
 }
