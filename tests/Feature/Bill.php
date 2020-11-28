@@ -4,7 +4,6 @@ namespace Tests\Feature;
 
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
-use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 
 class Bill extends TestCase
@@ -23,7 +22,7 @@ class Bill extends TestCase
      */
     public function testBillWithItemsDone()
     {
-        $endPoint = 'api/products/buyItems';
+        $endPoint = 'api/products/buyItems?currency=EGY';
         $params = [
             "items" => [
                 [
