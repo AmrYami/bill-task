@@ -9,8 +9,8 @@ solid principles.
 unit testing for bill only.
 
 please first you need to create 2 databases 1 for deploy set in .env another for testing and
- set in .env.example.
- please sure you have 2 files in project (.env, .env.example)
+ set in .env.testing.
+ please sure you have 2 files in project (.env, .env.testing)
  
  then do these commands :
  1: composer install.
