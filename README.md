@@ -18,9 +18,9 @@ please first you need to create 2 databases 1 for deploy set in .env another for
  3: php artisan jwt:secret
 
 note:
-    i used controller to get request and return response and then send it to service, 
+    i used controller to get request and then send it to service, 
     service use classes as need then call repository to call database
-     then return result.
+     then return result last controller return response.
      
     contorller call service 
             service use classes and call repository
