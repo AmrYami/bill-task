@@ -4,6 +4,7 @@ solution description.
 
 used:
 JWTAUTH package.
+GraphQL.
 composite design pattern.
 solid principles.
 unit testing for bill only.
