@@ -1,27 +1,22 @@
 {
-	"variables": [],
 	"info": {
+		"_postman_id": "baeff8d4-3331-4645-82a6-b8d8f26ca984",
 		"name": "taskBill",
-		"_postman_id": "0186b27c-85d2-6697-bbe9-8a5ef70f1c86",
-		"description": "",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
 			"name": "localhost/bill-task/public/api/products/1/createDiscount",
 			"request": {
-				"url": "localhost/bill-task/public/api/products/1/createDiscount",
 				"method": "POST",
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2JpbGwtdGFza1wvcHVibGljXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNjA1OTAyNTQ4LCJleHAiOjE2MDU5MDYxNDgsIm5iZiI6MTYwNTkwMjU0OCwianRpIjoiY2o3ckwzekFSMlN0OG1VRyIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.UsaBCCJ00Lci_H52SNhqwLHFdZEH_Wcl81nlfmh12Hk",
-						"description": ""
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2JpbGwtdGFza1wvcHVibGljXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNjA1OTAyNTQ4LCJleHAiOjE2MDU5MDYxNDgsIm5iZiI6MTYwNTkwMjU0OCwianRpIjoiY2o3ckwzekFSMlN0OG1VRyIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.UsaBCCJ00Lci_H52SNhqwLHFdZEH_Wcl81nlfmh12Hk"
 					},
 					{
 						"key": "Content-Type",
 						"value": "application/json",
-						"description": "",
 						"disabled": true
 					}
 				],
@@ -31,44 +26,81 @@
 						{
 							"key": "discount_percentage",
 							"value": "10",
-							"description": "",
 							"type": "text"
 						}
 					]
 				},
-				"description": ""
+				"url": {
+					"raw": "localhost/bill-task/public/api/products/1/createDiscount",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"bill-task",
+						"public",
+						"api",
+						"products",
+						"1",
+						"createDiscount"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "localhost/bill-task/public/api/products/buyItems",
 			"request": {
-				"url": "localhost/bill-task/public/api/products/buyItems",
 				"method": "POST",
 				"header": [
 					{
 						"key": "Authorization",
 						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2JpbGwtdGFza1wvcHVibGljXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNjA1OTI2Njk0LCJleHAiOjE2MDU5MzAyOTQsIm5iZiI6MTYwNTkyNjY5NCwianRpIjoid3JuY0l6bmFidUdqM0tIOSIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.tJM1I6eZVL-gnKL0pEx5VODNKYxAQcJY2l68_3DJchs",
-						"description": "",
 						"disabled": true
 					},
 					{
 						"key": "Content-Type",
-						"value": "application/json",
-						"description": ""
+						"value": "application/json"
 					}
 				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\"items\": [{\n\t\t\t\"id\": 1,\n\t\t\t\"count\": 2\n\t\t},\n\t\t{\n\t\t\t\"id\": 4,\n\t\t\t\"count\": 1\n\t\t},\n\t\t{\n\t\t\t\"id\": 3,\n\t\t\t\"count\": 1\n\t\t}\n\t]\n}"
 				},
-				"description": ""
+				"url": {
+					"raw": "localhost/bill-task/public/api/products/buyItems",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"bill-task",
+						"public",
+						"api",
+						"products",
+						"buyItems"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "localhost/bill-task/public/api/products/buyItems?currency=EGY",
 			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2JpbGwtdGFza1wvcHVibGljXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNjA1OTI2Njk0LCJleHAiOjE2MDU5MzAyOTQsIm5iZiI6MTYwNTkyNjY5NCwianRpIjoid3JuY0l6bmFidUdqM0tIOSIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.tJM1I6eZVL-gnKL0pEx5VODNKYxAQcJY2l68_3DJchs",
+						"disabled": true
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"items\": [{\n\t\t\t\"id\": 1,\n\t\t\t\"count\": 1\n\t\t},\n\t\t{\n\t\t\t\"id\": 2,\n\t\t\t\"count\": 1\n\t\t}\n\t]\n}"
+				},
 				"url": {
 					"raw": "localhost/bill-task/public/api/products/buyItems?currency=EGY",
 					"host": [
@@ -84,87 +116,80 @@
 					"query": [
 						{
 							"key": "currency",
-							"value": "EGY",
-							"equals": true,
-							"description": ""
+							"value": "EGY"
 						}
-					],
-					"variable": []
-				},
-				"method": "POST",
-				"header": [
-					{
-						"key": "Authorization",
-						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2JpbGwtdGFza1wvcHVibGljXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNjA1OTI2Njk0LCJleHAiOjE2MDU5MzAyOTQsIm5iZiI6MTYwNTkyNjY5NCwianRpIjoid3JuY0l6bmFidUdqM0tIOSIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.tJM1I6eZVL-gnKL0pEx5VODNKYxAQcJY2l68_3DJchs",
-						"description": "",
-						"disabled": true
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"description": ""
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\"items\": [{\n\t\t\t\"id\": 1,\n\t\t\t\"count\": 1\n\t\t},\n\t\t{\n\t\t\t\"id\": 2,\n\t\t\t\"count\": 1\n\t\t}\n\t]\n}"
-				},
-				"description": ""
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "localhost/bill-task/public/api/products/buyItems",
 			"request": {
-				"url": "localhost/bill-task/public/api/products/buyItems",
 				"method": "POST",
 				"header": [
 					{
 						"key": "Authorization",
 						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2JpbGwtdGFza1wvcHVibGljXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNjA1OTI2Njk0LCJleHAiOjE2MDU5MzAyOTQsIm5iZiI6MTYwNTkyNjY5NCwianRpIjoid3JuY0l6bmFidUdqM0tIOSIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.tJM1I6eZVL-gnKL0pEx5VODNKYxAQcJY2l68_3DJchs",
-						"description": "",
 						"disabled": true
 					},
 					{
 						"key": "Content-Type",
-						"value": "application/json",
-						"description": ""
+						"value": "application/json"
 					}
 				],
 				"body": {
 					"mode": "raw",
 					"raw": "{\"items\": [{\n\t\t\t\"id\": 5,\n\t\t\t\"count\": 1\n\t\t}\n\t]\n}"
 				},
-				"description": ""
+				"url": {
+					"raw": "localhost/bill-task/public/api/products/buyItems",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"bill-task",
+						"public",
+						"api",
+						"products",
+						"buyItems"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "localhost/bill-task/public/api/products",
 			"request": {
-				"url": "localhost/bill-task/public/api/products",
 				"method": "GET",
 				"header": [
 					{
 						"key": "Authorization",
-						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2JpbGwtdGFza1wvcHVibGljXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNjA2MDM2MDU4LCJleHAiOjE2MDYwMzk2NTgsIm5iZiI6MTYwNjAzNjA1OCwianRpIjoiMWN5ZkUxNXBHamM1eERnMSIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.jaNEpBMQ7hovuC5ni7Jx-Q5WMnVQkyEBltr_7dhJCdk",
-						"description": ""
+						"value": "bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3RcL2JpbGwtdGFza1wvcHVibGljXC9hcGlcL2F1dGhcL2xvZ2luIiwiaWF0IjoxNjA2MDM2MDU4LCJleHAiOjE2MDYwMzk2NTgsIm5iZiI6MTYwNjAzNjA1OCwianRpIjoiMWN5ZkUxNXBHamM1eERnMSIsInN1YiI6MSwicHJ2IjoiMjNiZDVjODk0OWY2MDBhZGIzOWU3MDFjNDAwODcyZGI3YTU5NzZmNyJ9.jaNEpBMQ7hovuC5ni7Jx-Q5WMnVQkyEBltr_7dhJCdk"
 					},
 					{
 						"key": "",
-						"value": "",
-						"description": ""
+						"value": ""
 					}
 				],
-				"body": {},
-				"description": ""
+				"url": {
+					"raw": "localhost/bill-task/public/api/products",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"bill-task",
+						"public",
+						"api",
+						"products"
+					]
+				}
 			},
 			"response": []
 		},
 		{
 			"name": "localhost/bill-task/public/api/auth/login",
 			"request": {
-				"url": "localhost/bill-task/public/api/auth/login",
 				"method": "POST",
 				"header": [],
 				"body": {
@@ -173,18 +198,132 @@
 						{
 							"key": "email",
 							"value": "amr@gmail.com",
-							"description": "",
 							"type": "text"
 						},
 						{
 							"key": "password",
 							"value": "123456789",
-							"description": "",
 							"type": "text"
 						}
 					]
 				},
-				"description": ""
+				"url": {
+					"raw": "localhost/bill-task/public/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"bill-task",
+						"public",
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "grashql",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "{\n    users { \n    id,\n    name,\n    email\n}\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "localhost/bill-task/public/graphql",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"bill-task",
+						"public",
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "grashql Products",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "{\n    products(first: 1 page: 3) {     \n\n      paginatorInfo {\n        hasMorePages\n        total\n        count\n        currentPage\n       }\n        data{\n           id,\n           name\n        }\n}\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "localhost/bill-task/public/graphql",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"bill-task",
+						"public",
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "graphqlFind",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "{\n    user(id: 1) { \n    id,\n    name,\n    email,\n    products{\n        id,\n        name\n    }\n}\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "localhost/bill-task/public/graphql",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"bill-task",
+						"public",
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "graphqlFind Product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "{\n    product(id: 1) { \n    id,\n    name,\n    user{\n        id,\n        name\n    }\n}\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "localhost/bill-task/public/graphql",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"bill-task",
+						"public",
+						"graphql"
+					]
+				}
 			},
 			"response": []
 		}
